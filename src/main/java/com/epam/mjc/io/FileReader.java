@@ -40,6 +40,8 @@ public class FileReader {
                 case "Phone:":
                     pf.setPhone(Long.parseLong(args[1]));
                     break;
+                default:
+                    throw new NumberFormatException("There was unknown argument:" + args[0]);
             }
         } catch (NumberFormatException e) {
             e.printStackTrace();
